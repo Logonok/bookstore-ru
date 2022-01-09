@@ -1,0 +1,215 @@
+[
+  {
+    "_id": {
+      "$oid": "61ca9b3892b2b5f6019a2d0c"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "price": 200,
+    "stock": 55,
+    "onSale": true,
+    "name": "Зелёная книга",
+    "description": "Зелёная книга входит в состав Царского набора или может быть приобретена отдельно",
+    "picture": {
+      "$oid": "61cfef5b3df72eb9929e2888"
+    },
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "_createdAt": {
+      "$date": "2021-12-28T05:06:00.241Z"
+    },
+    "_editor": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-01T06:06:20.699Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ca9b5392b2b5f6019a2d0d"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "price": 350,
+    "stock": 25,
+    "onSale": true,
+    "name": "Красная книга",
+    "description": "Красная книга входит в состав Царского набора или может быть приобретена отдельно",
+    "picture": {
+      "$oid": "61cfef493df72eb9929e2885"
+    },
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "_createdAt": {
+      "$date": "2021-12-28T05:06:27.087Z"
+    },
+    "_editor": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-01T06:06:05.427Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ca9b9b92b2b5f6019a2d0e"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "price": 750,
+    "stock": 15,
+    "onSale": true,
+    "name": "Синий набор",
+    "description": "Набор состоит из двух книг недоступных по отдельности",
+    "picture": {
+      "$oid": "61cfef153df72eb9929e2882"
+    },
+    "bundled": true,
+    "totalStock": false,
+    "items": [
+      {
+        "$oid": "61ca9bc592b2b5f6019a2d0f"
+      },
+      {
+        "$oid": "61ca9bee92b2b5f6019a2d10"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2021-12-28T05:07:39.963Z"
+    },
+    "_editor": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-01T06:05:14.910Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ca9bc592b2b5f6019a2d0f"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "price": 0,
+    "stock": 0,
+    "onSale": false,
+    "name": "Сине-желтая книга",
+    "description": "Сине-желтая книга недоступна, кроме как в Синем наборе",
+    "picture": null,
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "_createdAt": {
+      "$date": "2021-12-28T05:08:21.124Z"
+    },
+    "_editor": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "_updatedAt": {
+      "$date": "2021-12-28T05:34:27.421Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ca9bee92b2b5f6019a2d10"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "price": 0,
+    "stock": 0,
+    "onSale": false,
+    "name": "Сине-зеленая книга",
+    "description": "Сине-зеленая книга недоступна, кроме как в Синем наборе",
+    "picture": null,
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "_createdAt": {
+      "$date": "2021-12-28T05:09:02.268Z"
+    },
+    "_editor": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "_updatedAt": {
+      "$date": "2021-12-28T05:34:17.501Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ca9c8692b2b5f6019a2d11"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "price": 450,
+    "stock": 20,
+    "onSale": true,
+    "name": "Царский набор",
+    "description": "Набор состоит из книг доступных в продаже по отдельности",
+    "picture": {
+      "$oid": "61cfeefa3df72eb9929e287f"
+    },
+    "bundled": true,
+    "totalStock": true,
+    "items": [
+      {
+        "$oid": "61ca9b3892b2b5f6019a2d0c"
+      },
+      {
+        "$oid": "61ca9b5392b2b5f6019a2d0d"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2021-12-28T05:11:34.409Z"
+    },
+    "_editor": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-01T06:06:39.380Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61caa06492b2b5f6019a2d1a"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "61ca9a22ffe48d4455a14134"
+    },
+    "price": 999,
+    "stock": 6,
+    "onSale": false,
+    "name": "Черная книга",
+    "description": "Книга снята с продажи",
+    "picture": {
+      "$oid": "61cfeed43df72eb9929e287c"
+    },
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "_createdAt": {
+      "$date": "2021-12-28T05:28:04.912Z"
+    },
+    "_editor": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-01T06:04:07.680Z"
+    }
+  }
+]

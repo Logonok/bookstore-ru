@@ -1,0 +1,20 @@
+{
+  "label": "Представление для покупателя",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "item",
+      "eagerLoading": true,
+      "eagerView": "publicList",
+      "orderNumber": 20
+    },
+    {
+      "name": "quantity",
+      "orderNumber": 30
+    },
+    {
+      "name": "price",
+      "orderNumber": 40
+    }
+  ]
+}

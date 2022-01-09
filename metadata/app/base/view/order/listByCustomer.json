@@ -1,0 +1,25 @@
+{
+  "label": "Список для покупателя",
+  "description": "Заказы, в которых текущий пользователь является покупателем",
+  "filter": {
+    "customer": "$user"
+  },
+  "order": {
+    "$key": -1
+  },
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "_createdAt",
+      "orderNumber": 60
+    },
+    {
+      "name": "totalPrice",
+      "orderNumber": 70
+    },
+    {
+      "name": "_state",
+      "orderNumber": 90
+    }
+  ]
+}

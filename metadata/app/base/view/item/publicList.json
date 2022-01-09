@@ -1,0 +1,34 @@
+{
+  "label": "Публичный список",
+  "description": "Представление товаров списком для фронта",
+  "filter": {
+    "onSale": true
+  },
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "description",
+      "orderNumber": 20
+    },
+    {
+      "name": "stock",
+      "orderNumber": 30
+    },
+    {
+      "name": "price",
+      "orderNumber": 40
+    },
+    {
+      "name": "picture",
+      "orderNumber": 50
+    },
+    {
+      "name": "bundled",
+      "orderNumber": 60
+    }
+  ]
+}

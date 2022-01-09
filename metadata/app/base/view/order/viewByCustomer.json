@@ -1,0 +1,25 @@
+{
+  "label": "Представление для покупателя",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "items",
+      "eagerDepth": 2,
+      "eagerLoading": true,
+      "eagerView": "viewByCustomer",
+      "orderNumber": 60
+    },
+    {
+      "name": "totalPrice",
+      "orderNumber": 70
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 80
+    },
+    {
+      "name": "_state",
+      "orderNumber": 90
+    }
+  ]
+}

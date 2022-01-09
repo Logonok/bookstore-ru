@@ -1,0 +1,24 @@
+{
+  "label": "Представление списка",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "order",
+      "hidden": true,
+      "orderNumber": 10
+    },
+    {
+      "name": "item",
+      "eagerLoading": true,
+      "orderNumber": 20
+    },
+    {
+      "name": "quantity",
+      "orderNumber": 30
+    },
+    {
+      "name": "price",
+      "orderNumber": 40
+    }
+  ]
+}

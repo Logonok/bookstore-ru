@@ -1,0 +1,23 @@
+{
+  "label": "Представление списка",
+  "description": "Представление списка по умолчанию",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "customer",
+      "orderNumber": 10
+    },
+    {
+      "name": "totalPrice",
+      "orderNumber": 70
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 80
+    },
+    {
+      "name": "_state",
+      "orderNumber": 90
+    }
+  ]
+}

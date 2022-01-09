@@ -1,0 +1,35 @@
+{
+  "label": "Публичный вид",
+  "description": "Представление для фронта",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "onSale",
+      "orderNumber": 10
+    },
+    {
+      "name": "name",
+      "orderNumber": 20
+    },
+    {
+      "name": "description",
+      "orderNumber": 30
+    },
+    {
+      "name": "stock",
+      "orderNumber": 40
+    },
+    {
+      "name": "price",
+      "orderNumber": 50
+    },
+    {
+      "name": "picture",
+      "orderNumber": 60
+    },
+    {
+      "name": "bundled",
+      "orderNumber": 70
+    }
+  ]
+}

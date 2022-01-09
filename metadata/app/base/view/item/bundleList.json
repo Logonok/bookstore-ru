@@ -1,0 +1,30 @@
+{
+  "label": "Список наборов",
+  "description": "Представление списка наборов товаров",
+  "filter": {
+    "bundled": true
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "onSale",
+      "orderNumber": 10
+    },
+    {
+      "name": "name",
+      "orderNumber": 20
+    },
+    {
+      "name": "price",
+      "orderNumber": 40
+    },
+    {
+      "name": "stock",
+      "orderNumber": 50
+    },
+    {
+      "name": "totalStock",
+      "orderNumber": 80
+    }
+  ]
+}

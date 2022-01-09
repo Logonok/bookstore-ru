@@ -1,0 +1,23 @@
+{
+  "label": "Представление редактирования",
+  "description": "Запретить редактирование элемента заказа. Только создание или удаление",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "order",
+      "orderNumber": 10
+    },
+    {
+      "name": "item",
+      "orderNumber": 20
+    },
+    {
+      "name": "quantity",
+      "orderNumber": 30
+    },
+    {
+      "name": "price",
+      "orderNumber": 40
+    }
+  ]
+}

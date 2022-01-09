@@ -1,27 +1,26 @@
 {
-  "name": "evado-app-boilerplate",
-  "version": "4.0.1",
-  "description": "Boilerplate App built on Evado Declarative Framework",
-  "author": "Maxim Khorin",
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Bookstore web app",
+  "author": "Logonok",
   "license": "MIT",
   "engines": {
     "node": ">=16.13.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkhorin/evado-app-boilerplate.git"
+    "url": "https://github.com/logonok/bookstore.git"
   },
   "dependencies": {
-    "evado": "~5.0.0",
-    "evado-api-base": "~4.1.0",
+    "evado": "~5.1.0",
+    "evado-api-base": "~4.2.0",
     "evado-api-navigation": "~2.1.0",
-    "evado-meta-base": "~4.0.0",
+    "evado-meta-base": "~4.1.0",
     "evado-meta-navigation": "~2.1.0",
     "evado-module-account": "~3.0.0",
-    "evado-module-admin": "~5.0.0",
-    "evado-module-office": "~5.0.0",
-    "evado-module-studio": "~5.0.0",
-    "minio": "^7.0.18",
+    "evado-module-admin": "~5.1.0",
+    "evado-module-office": "~5.1.0",
+    "evado-module-studio": "~5.1.0",
     "sharp": "~0.29.0"
   },
   "scripts": {

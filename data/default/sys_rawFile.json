@@ -1,0 +1,92 @@
+[
+  {
+    "_id": {
+      "$oid": "61cfeed33df72eb9929e287b"
+    },
+    "file": "2022-01/61cfeed33df72eb9929e287a",
+    "name": "blackBook.png",
+    "size": 1714,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-01T06:04:03.375Z"
+    },
+    "creator": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "owner": {
+      "$oid": "61cfeed43df72eb9929e287c"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61cfeef83df72eb9929e287e"
+    },
+    "file": "2022-01/61cfeef83df72eb9929e287d",
+    "name": "tzarBundle.png",
+    "size": 3726,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-01T06:04:40.236Z"
+    },
+    "creator": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "owner": {
+      "$oid": "61cfeefa3df72eb9929e287f"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61cfef133df72eb9929e2881"
+    },
+    "file": "2022-01/61cfef133df72eb9929e2880",
+    "name": "blueBundle.png",
+    "size": 4600,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-01T06:05:07.034Z"
+    },
+    "creator": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "owner": {
+      "$oid": "61cfef153df72eb9929e2882"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61cfef483df72eb9929e2884"
+    },
+    "file": "2022-01/61cfef483df72eb9929e2883",
+    "name": "redBook.png",
+    "size": 2309,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-01T06:06:00.936Z"
+    },
+    "creator": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "owner": {
+      "$oid": "61cfef493df72eb9929e2885"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61cfef593df72eb9929e2887"
+    },
+    "file": "2022-01/61cfef593df72eb9929e2886",
+    "name": "greenBook.png",
+    "size": 2314,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-01T06:06:17.895Z"
+    },
+    "creator": {
+      "$oid": "61cfeeb775894766780230d5"
+    },
+    "owner": {
+      "$oid": "61cfef5b3df72eb9929e2888"
+    }
+  }
+]

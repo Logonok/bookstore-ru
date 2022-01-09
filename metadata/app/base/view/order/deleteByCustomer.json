@@ -1,0 +1,12 @@
+{
+  "label": "Удаление покупателем",
+  "description": "Покупатель может удалить свои несогласованные заказы",
+  "filter": {
+    "customer": "$user",
+    "_state": [
+      "draft",
+      "confirmed"
+    ]
+  },
+  "readOnly": false
+}

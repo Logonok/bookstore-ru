@@ -1,0 +1,27 @@
+{
+  "label": "Список",
+  "description": "Список по умолчанию",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "onSale",
+      "orderNumber": 10
+    },
+    {
+      "name": "name",
+      "orderNumber": 20
+    },
+    {
+      "name": "price",
+      "orderNumber": 40
+    },
+    {
+      "name": "stock",
+      "orderNumber": 50
+    },
+    {
+      "name": "bundled",
+      "orderNumber": 70
+    }
+  ]
+}

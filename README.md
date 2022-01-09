@@ -1,58 +1,54 @@
-# Evado Boilerplate App
+# Веб-приложение «Книжный магазин» 
 
-Lightweight and feature-rich template built on 
-[Evado Declarative Framework](https://github.com/mkhorin/evado) 
-for rapid web app development.
+Демонстрируется объединение отдельных товаров магазина в наборы,
+которые сами по себе становятся товаром.
 
-![Evado Declarative Framework](https://github.com/mkhorin/evado/blob/master/doc/evado-framework-steps.jpg)
+Приложение создано 
+на [декларативном фреймворке Evado](https://github.com/mkhorin/evado).
 
-## Installation
+![Evado Bookstore App](doc/evado-bookstore-01.png)
 
-#### Install environment
-- [Node.js](https://nodejs.org) (version 16)
-- [MongoDB](https://www.mongodb.com/download-center/community) (version 4)
+## Установка через Docker
+
+Скопируйте приложение в /app
+```sh
+cd /app
+docker-compose up -d mongo
+docker-compose up --build installer
+docker-compose up -d server
+```
+
+## Типовая установка
+
+#### Установите окружение
+- [Node.js](https://nodejs.org) (версия 16)
+- [MongoDB](https://www.mongodb.com/download-center/community) (версия 4)
 
 #### Linux
-Copy files from repository to /app
+Скопируйте приложение в /app
 ```sh
 cd /app
 npm install
 NODE_ENV=development node console/install
+NODE_ENV=development node console/start
 ```
 
 #### Windows
-Copy files from repository to c:/app
+Скопируйте приложение в c:/app
 ```sh
 cd c:/app
 npm install
 set NODE_ENV=development
 node console/install
-```
-
-## Start app
-
-#### Linux
-```sh
-cd /app
-NODE_ENV=development node console/start
-```
-
-#### Windows
-```sh
-cd c:/app
-set NODE_ENV=development
 node console/start
 ```
-  
-## Usage
- 
-Web interface: [http://localhost:3000](http://localhost:3000)
 
-Sign in as administrator:
+## Использование
+
+Веб-интерфейс: **http://localhost:3000**
+
+Войти как администратор:
 ```sh
 Email: a@a.a
 Password: 123456
 ```
-
-## Tutorial
-- [Build an App Without Coding](http://nervebit.com)

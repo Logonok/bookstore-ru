@@ -1,0 +1,21 @@
+{
+  "label": "Создание из корзины",
+  "description": "Создание заказа из корзины. Поведение определяет необходимый функционал",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "customer",
+      "orderNumber": 30
+    }
+  ],
+  "behaviors": [
+    {
+      "type": "custom",
+      "orderNumber": 10,
+      "description": "Функционал создания заказа из корзины",
+      "config": {
+        "Class": "component/meta/behavior/CartOrderBehavior"
+      }
+    }
+  ]
+}

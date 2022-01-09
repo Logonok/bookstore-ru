@@ -1,0 +1,42 @@
+<template id="items">
+    <div class="page">
+
+        <breadcrumbs :cart="cart"></breadcrumbs>
+
+        <h1>Товары</h1>
+
+        <div class="loadable-container">
+
+            <search @search="onSearch"></search>
+
+            <div class="row">
+                <div v-for="item of items" class="col-md-4 col-lg-3">
+                    <div class="item-card">
+                        <a v-if="item.picture" @click.prevent="toItem(item.id)" href="#" class="d-block text-center">
+                            <img :src="item.picture" class="img-fluid" alt="">
+                        </a>
+                        <h4><a @click.prevent="toItem(item.id)" href="#">{{item.name}}</a></h4>
+                        <div class="price">
+                            <span>Цена</span>:
+                            <b>{{item.price}}</b>
+                        </div>
+                        <div class="price">
+                            <span>В наличии</span>:
+                            <b>{{item.stock}}</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <pagination @change="load"></pagination>
+
+            <div v-show="!loading && empty" class="alert-warning alert">
+                Товары не найдены
+            </div>
+
+            <div v-show="loading" class="loader">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
+    </div>
+</template>

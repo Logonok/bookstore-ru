@@ -1,0 +1,39 @@
+{
+  "label": "Базовая секция",
+  "description": "Базовая секция бокового меню",
+  "nodes": [
+    {
+      "name": "orders",
+      "label": "Заказы",
+      "orderNumber": 10,
+      "class": "order"
+    },
+    {
+      "name": "separator",
+      "label": "Разделитель",
+      "description": "Разделитель пунктов меню",
+      "orderNumber": 20,
+      "type": "divider"
+    },
+    {
+      "name": "onSaleItems",
+      "label": "Товары в продаже",
+      "orderNumber": 30,
+      "class": "item",
+      "view": "onSaleList"
+    },
+    {
+      "name": "bundledItems",
+      "label": "Наборы товаров",
+      "orderNumber": 40,
+      "class": "item",
+      "view": "bundleList"
+    },
+    {
+      "name": "items",
+      "label": "Все товары",
+      "orderNumber": 50,
+      "class": "item"
+    }
+  ]
+}

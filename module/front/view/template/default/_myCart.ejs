@@ -1,0 +1,56 @@
+<template id="my-cart">
+    <div class="page">
+
+        <breadcrumbs :cart="cart">
+            <template #path>
+                <li class="breadcrumb-item">
+                    <a @click.prevent="toMain" href="#">Главная</a>
+                </li>
+                <li class="breadcrumb-item">Корзина</li>
+            </template>
+        </breadcrumbs>
+
+        <h1>Корзина</h1>
+
+        <div class="loadable-container">
+
+            <template v-if="!loading && !empty">
+                <div class="cart-items">
+                    <div v-for="item of items" class="cart-item">
+                        <div class="cart-item-name">
+                            <a @click.prevent="toItem(item.id)" href="#">{{item.name}}</a>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <span>Количество</span>:
+                            <b class="quantity">{{item.quantity}}</b>
+                        </div>
+                        <div class="cart-item-price">
+                            <span>Цена</span>:
+                            <b class="price">{{item.price}}</b>
+                        </div>
+                        <div class="cart-item-command">
+                            <span @click="onIncrease(item)" class="fa fa-plus" title="Увеличить количество"></span>
+                            <span @click="onReduce(item)" class="fa fa-minus" title="Уменьшить количество"></span>
+                            <span @click="onRemove(item)" class="text-danger fa fa-trash" title="Удалить"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <div>
+                        <span>Общая цена</span>:
+                        <span class="num">{{totalPrice}}</span>
+                    </div>
+                    <button @click="onOrder" class="btn-primary btn">Заказать</button>
+                </div>
+            </template>
+
+            <div v-show="!loading && empty" class="alert-warning alert">
+                Ваша корзина пуста
+            </div>
+
+            <div v-show="loading" class="loader">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
+    </div>
+</template>
