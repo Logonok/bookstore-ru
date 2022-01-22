@@ -30,6 +30,14 @@
     {
       "name": "bundled",
       "orderNumber": 70
+    },
+    {
+      "name": "propColor",
+      "orderNumber": 120
+    },
+    {
+      "name": "propLead",
+      "orderNumber": 130
     }
   ]
 }

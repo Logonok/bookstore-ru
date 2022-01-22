@@ -141,7 +141,7 @@
           "description": "Проверить, что запас набора не превышает запас его элементов",
           "config": {
             "Class": "component/meta/validator/TotalStockValidator",
-            "message": "Запас набора больше,  чем запас его элемента {name}"
+            "message": "Запас набора больше, чем запас его элемента {name}"
           }
         }
       ]
@@ -303,6 +303,41 @@
       "signed": false,
       "trim": true,
       "unique": false
+    },
+    {
+      "name": "_class",
+      "label": "Класс",
+      "type": "string",
+      "viewType": "class",
+      "description": "Служебный атрибут, содержащий имя класса",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": false,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 110,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    }
+  ],
+  "groups": [
+    {
+      "active": true,
+      "name": "props",
+      "label": "Дополнительные свойства",
+      "loadable": false,
+      "orderNumber": 1000,
+      "readOnly": false,
+      "required": false
     }
   ]
 }

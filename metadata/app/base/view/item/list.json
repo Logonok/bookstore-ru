@@ -12,6 +12,10 @@
       "orderNumber": 20
     },
     {
+      "name": "description",
+      "orderNumber": 30
+    },
+    {
       "name": "price",
       "orderNumber": 40
     },

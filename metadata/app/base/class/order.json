@@ -9,6 +9,7 @@
       "type": "user",
       "commonSearchable": false,
       "createOnRead": false,
+      "defaultValue": "$user",
       "eagerLoading": true,
       "escape": true,
       "hidden": false,
@@ -23,8 +24,7 @@
       "selectSearchable": false,
       "signed": false,
       "trim": true,
-      "unique": false,
-      "defaultValue": "$user"
+      "unique": false
     },
     {
       "name": "items",
@@ -63,6 +63,7 @@
       "description": "Общая цена всех элементов заказа",
       "commonSearchable": false,
       "createOnRead": false,
+      "defaultValue": 0,
       "eagerLoading": false,
       "escape": true,
       "expression": [
@@ -91,8 +92,7 @@
       "selectSearchable": false,
       "signed": false,
       "trim": true,
-      "unique": false,
-      "defaultValue": 0
+      "unique": false
     },
     {
       "name": "_createdAt",

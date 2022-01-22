@@ -44,6 +44,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div v-for="{label, value} of propAttrs" class="form-group row">
+                                <label class="col-3 col-form-label">{{label}}</label>
+                                <div class="col-9">
+                                    <div class="form-control-plaintext">{{value}}</div>
+                                </div>
+                            </div>
                             <div v-if="price" class="form-group row">
                                 <label class="col-3 col-form-label">Цена</label>
                                 <div class="col-9">

@@ -94,5 +94,4 @@ module.exports = class CartOrderBehavior extends Base {
         });
         return model.insert();
     }
-
 };

@@ -1,11 +1,11 @@
 /**
- * @copyright Copyright (c) 2021 Logonok <logonok@gmail.com>
+ * @copyright Copyright (c) 2022 Logonok <logonok@gmail.com>
  *
  * Check the looping of nested items
  */
 'use strict';
 
-const Base = require('evado-meta-base/validator/Validator');
+const Base = require('evado/component/validator/CustomValidator');
 
 module.exports = class LoopedItemsValidator extends Base {
 
@@ -41,6 +41,6 @@ module.exports = class LoopedItemsValidator extends Base {
     }
 
     getMessage (name) {
-        return this.createMessage(this.message, 'Looped nesting: {name}', {name});
+        return this.createClientMessage(this.message, 'Looped nesting: {name}', {name});
     }
 };

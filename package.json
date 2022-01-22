@@ -1,7 +1,7 @@
 {
   "name": "bookstore",
-  "version": "1.0.0",
-  "description": "Bookstore web app",
+  "version": "2.0.0",
+  "description": "Bookstore Web App",
   "author": "Logonok",
   "license": "MIT",
   "engines": {

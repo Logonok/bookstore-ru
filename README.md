@@ -1,16 +1,16 @@
 # Веб-приложение «Книжный магазин» 
 
-Демонстрируется объединение отдельных товаров магазина в наборы,
-которые сами по себе становятся товаром.
+- Статья [Как создать товар состоящий из других товаров](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kak-sozdat-tovar-sostoiascii-iz-drugih-tovarov-61dccf2e577bb77d26c81e85)
+- Статья [Как создать товар с произвольным набором свойств](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kak-sozdat-tovar-sostoiascii-iz-drugih-tovarov-61dccf2e577bb77d26c81e85)
 
-Приложение создано 
-на [декларативном фреймворке Evado](https://github.com/mkhorin/evado).
+Веб-приложение сделано с помощью 
+[декларативного фреймворка Evado](https://github.com/mkhorin/evado).
 
 ![Evado Bookstore App](doc/evado-bookstore-01.png)
 
 ## Установка через Docker
 
-Скопируйте приложение в /app
+Скопируйте приложение в `/app`
 ```sh
 cd /app
 docker-compose up -d mongo
@@ -25,7 +25,7 @@ docker-compose up -d server
 - [MongoDB](https://www.mongodb.com/download-center/community) (версия 4)
 
 #### Linux
-Скопируйте приложение в /app
+Скопируйте приложение в `/app`
 ```sh
 cd /app
 npm install
@@ -34,7 +34,7 @@ NODE_ENV=development node console/start
 ```
 
 #### Windows
-Скопируйте приложение в c:/app
+Скопируйте приложение в `c:/app`
 ```sh
 cd c:/app
 npm install

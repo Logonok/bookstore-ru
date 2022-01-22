@@ -177,10 +177,10 @@
       "$date": "2021-12-28T05:11:34.409Z"
     },
     "_editor": {
-      "$oid": "61cfeeb775894766780230d5"
+      "$oid": "61dcec69aae68911ac8041a9"
     },
     "_updatedAt": {
-      "$date": "2022-01-01T06:06:39.380Z"
+      "$date": "2022-01-11T05:43:57.623Z"
     }
   },
   {
@@ -210,6 +210,107 @@
     },
     "_updatedAt": {
       "$date": "2022-01-01T06:04:07.680Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61df8f22257df870842c9d42"
+    },
+    "_class": "itemPencil",
+    "_creator": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "price": 5,
+    "stock": 55,
+    "onSale": true,
+    "name": "Красный карандаш",
+    "description": "Товар с дополнительными свойствами",
+    "picture": {
+      "$oid": "61df8fc1257df870842c9d46"
+    },
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "propColor": "red",
+    "propLead": "hard",
+    "_createdAt": {
+      "$date": "2022-01-13T02:32:02.216Z"
+    },
+    "_editor": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-13T05:19:11.119Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61df9219257df870842c9d56"
+    },
+    "_class": "itemPencil",
+    "_creator": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "price": 10,
+    "stock": 75,
+    "onSale": true,
+    "name": "Синий карандаш",
+    "description": "Товар с дополнительными свойствами",
+    "picture": {
+      "$oid": "61df8fd0257df870842c9d4c"
+    },
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "propColor": "blue",
+    "propLead": "soft",
+    "_createdAt": {
+      "$date": "2022-01-13T02:44:41.091Z"
+    },
+    "_editor": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-13T05:19:07.722Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e0c42178745493de63de6e"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "price": 400,
+    "stock": 10,
+    "onSale": true,
+    "name": "Школьный набор",
+    "description": "Набор с товарами разных классов",
+    "picture": {
+      "$oid": "61df8fd8257df870842c9d4f"
+    },
+    "bundled": true,
+    "totalStock": false,
+    "items": [
+      {
+        "$oid": "61caa06492b2b5f6019a2d1a"
+      },
+      {
+        "$oid": "61df8f22257df870842c9d42"
+      },
+      {
+        "$oid": "61df9219257df870842c9d56"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-14T00:30:25.301Z"
+    },
+    "_editor": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-14T00:30:56.353Z"
     }
   }
 ]

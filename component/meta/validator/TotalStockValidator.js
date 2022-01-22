@@ -1,11 +1,11 @@
 /**
- * @copyright Copyright (c) 2021 Logonok <logonok@gmail.com>
+ * @copyright Copyright (c) 2022 Logonok <logonok@gmail.com>
  *
  * Check that all nested items have the necessary stock
  */
 'use strict';
 
-const Base = require('evado-meta-base/validator/Validator');
+const Base = require('evado/component/validator/CustomValidator');
 
 module.exports = class TotalStockValidator extends Base {
 
@@ -51,6 +51,6 @@ module.exports = class TotalStockValidator extends Base {
     }
 
     getMessage (name) {
-        return this.createMessage(this.message, 'The bundle stock is greater than the stock of its element {name}', {name});
+        return this.createClientMessage(this.message, 'The bundle stock is greater than the stock of its element {name}', {name});
     }
 };

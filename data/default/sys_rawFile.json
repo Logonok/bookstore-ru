@@ -88,5 +88,77 @@
     "owner": {
       "$oid": "61cfef5b3df72eb9929e2888"
     }
+  },
+  {
+    "_id": {
+      "$oid": "61df8fd6257df870842c9d4e"
+    },
+    "file": "2022-01/61df8fd6257df870842c9d4d",
+    "name": "set2.png",
+    "size": 5220,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-13T02:35:02.388Z"
+    },
+    "creator": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "owner": {
+      "$oid": "61df8fd8257df870842c9d4f"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61df915a257df870842c9d51"
+    },
+    "file": "2022-01/61df915a257df870842c9d50",
+    "name": "pen-green.png",
+    "size": 5505,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-13T02:41:30.418Z"
+    },
+    "creator": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "owner": {
+      "$oid": "61df8fc9257df870842c9d49"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61df919e257df870842c9d53"
+    },
+    "file": "2022-01/61df919d257df870842c9d52",
+    "name": "pen-blue.png",
+    "size": 5490,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-13T02:42:38.004Z"
+    },
+    "creator": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "owner": {
+      "$oid": "61df8fd0257df870842c9d4c"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61df91a4257df870842c9d55"
+    },
+    "file": "2022-01/61df91a4257df870842c9d54",
+    "name": "pen-red.png",
+    "size": 5491,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-01-13T02:42:44.866Z"
+    },
+    "creator": {
+      "$oid": "61dcec69aae68911ac8041a9"
+    },
+    "owner": {
+      "$oid": "61df8fc1257df870842c9d46"
+    }
   }
 ]

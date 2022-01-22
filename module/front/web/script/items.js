@@ -4,7 +4,7 @@ Vue.component('items', {
     props: {
         pageSize: {
             type: Number,
-            default: 4
+            default: 8
         },
         cart: Object
     },

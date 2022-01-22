@@ -18,6 +18,7 @@ Vue.component('item', {
             bundled: null,
             quantity: 1,
             items: [],
+            propAttrs: [],
             loaded: false
         };
     },
@@ -64,7 +65,36 @@ Vue.component('item', {
             this.onSale = data.onSale;
             this.bundled = data.bundled;
             this.items = data.bundled ? await this.loadItems() : [];
+            await this.setPropAttrs(data);
             this.loaded = true;
+        },
+        async setPropAttrs (data) {
+            const {attrs} = await this.fetchMeta('class', {
+                class: data._class
+            });
+            for (const attr of attrs) {
+                if (attr.group === 'props' && data[attr.name]) {
+                    this.propAttrs.push(this.getPropAttr(attr, data));
+                }
+            }
+        },
+        getPropAttr (attr, data) {
+            return {
+                label: attr.label || attr.name,
+                value: this.getPropAttrEnumText(attr, data)
+            };
+        },
+        getPropAttrEnumText (attr, data) {
+            if (Array.isArray(attr.enums)) {
+                for (const {items} of attr.enums) {
+                    for (const item of items) {
+                        if (item.value === data[attr.name]) {
+                            return item.text;
+                        }
+                    }
+                }
+            }
+            return data[attr.name];
         },
         async loadItems () {
             const data = await this.fetchJson('list', {
