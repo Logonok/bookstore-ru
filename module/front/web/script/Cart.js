@@ -2,6 +2,10 @@
 
 class Cart {
 
+    static countPercent (percent, value) {
+        return this.roundPrice(value * percent / 100);
+    }
+
     static roundPrice (value) {
         return Math.round((value + Number.EPSILON) * 100) / 100;
     }
@@ -23,10 +27,10 @@ class Cart {
         }
     }
 
-    getTotalPrice () {
+    countPrice () {
         let total = 0;
         for (const item of this.items) {
-            total += item.getTotalPrice();
+            total += item.countPrice();
         }
         return this.constructor.roundPrice(total);
     }

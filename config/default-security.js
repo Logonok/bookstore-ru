@@ -13,13 +13,13 @@ module.exports = {
             type: 'all'
         }
     }, {
-        description: 'Гости и пользователи могуть читать изображения',
+        description: 'Гости и пользователи могуть читать скидки и изображения',
         roles: ['guest', 'user'],
         type: 'allow',
         actions: 'read',
         targets: {
             type: 'class',
-            class: 'picture'
+            class: ['discount', 'picture']
         }
     }, {
         description: 'Гости и пользователи могуть читать публичные представления товаров',

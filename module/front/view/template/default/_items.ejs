@@ -12,6 +12,9 @@
             <div class="row">
                 <div v-for="item of items" class="col-md-4 col-lg-3">
                     <div class="item-card">
+                        <div v-if="item.discount" class="item-card-discount">
+                            Скидка {{item.discount.percent}}%
+                        </div>
                         <a v-if="item.picture" @click.prevent="toItem(item.id)" href="#" class="d-block text-center">
                             <img :src="item.picture" class="img-fluid" alt="">
                         </a>

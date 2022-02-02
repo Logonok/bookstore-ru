@@ -14,7 +14,7 @@ class CartItem {
         this.cart = cart;
     }
 
-    getTotalPrice () {
+    countPrice () {
         return Cart.roundPrice(this.quantity * this.price);
     }
 

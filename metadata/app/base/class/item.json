@@ -141,7 +141,7 @@
           "description": "Проверить, что запас набора не превышает запас его элементов",
           "config": {
             "Class": "component/meta/validator/TotalStockValidator",
-            "message": "Запас набора больше, чем запас его элемента {name}"
+            "message": "Запас набора больше,  чем запас его элемента {name}"
           }
         }
       ]
@@ -305,6 +305,46 @@
       "unique": false
     },
     {
+      "name": "discount",
+      "label": "Действующая скидка",
+      "type": "backref",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "filter": [
+        "and",
+        [
+          "<",
+          "startDate",
+          "$now"
+        ],
+        [
+          ">",
+          "endDate",
+          "$now"
+        ]
+      ],
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 110,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "items",
+      "refClass": "itemDiscount",
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
       "name": "_class",
       "label": "Класс",
       "type": "string",
@@ -318,7 +358,7 @@
       "hideEmpty": false,
       "history": false,
       "multiple": false,
-      "orderNumber": 110,
+      "orderNumber": 120,
       "sortable": false,
       "sortableRelation": false,
       "readOnly": true,

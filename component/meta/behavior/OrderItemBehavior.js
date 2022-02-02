@@ -65,8 +65,14 @@ module.exports = class OrderItemBehavior extends Base {
     }
 
     async setPrice () {
-        const item = await this.resolveItem();
-        const price = MathHelper.round(item.get('price') * this.getQuantity(), 2);
+        let item = await this.resolveItem();
+        let quantity = this.getQuantity();
+        let price = item.get('price');
+        let discount = await item.related.resolve('discount');
+        if (discount && quantity >= discount.get('minQuantity')) {
+            price -= price * discount.get('percent') / 100;
+        }
+        price = MathHelper.round(price * quantity, 2);
         this.owner.set('price', price);
     }
 

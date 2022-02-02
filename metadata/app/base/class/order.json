@@ -59,8 +59,8 @@
     {
       "name": "totalPrice",
       "label": "Общая цена",
-      "type": "calc",
-      "description": "Общая цена всех элементов заказа",
+      "type": "float",
+      "description": "Общая цена заказа",
       "commonSearchable": false,
       "createOnRead": false,
       "defaultValue": 0,

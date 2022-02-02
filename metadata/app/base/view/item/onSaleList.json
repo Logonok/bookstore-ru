@@ -20,7 +20,8 @@
     },
     {
       "name": "picture",
-      "orderNumber": 60
+      "orderNumber": 60,
+      "viewType": "thumbnail"
     },
     {
       "name": "bundled",

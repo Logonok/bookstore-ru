@@ -34,6 +34,25 @@
       "label": "Все товары",
       "orderNumber": 50,
       "class": "item"
+    },
+    {
+      "name": "separator2",
+      "label": "Разделитель",
+      "orderNumber": 60,
+      "type": "divider"
+    },
+    {
+      "name": "currentDiscounts",
+      "label": "Действующие скидки",
+      "orderNumber": 70,
+      "class": "discount",
+      "view": "current"
+    },
+    {
+      "name": "discounts",
+      "label": "Все скидки",
+      "orderNumber": 80,
+      "class": "discount"
     }
   ]
 }

@@ -1,0 +1,70 @@
+{
+  "abstract": false,
+  "description": "Скидка на товар",
+  "label": "Скидка на товар",
+  "parent": "discount",
+  "attrs": [
+    {
+      "name": "minQuantity",
+      "label": "Минимальное количество товара",
+      "type": "integer",
+      "description": "Минимальное количество товара для скидки",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": 1,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "number",
+          "orderNumber": 10,
+          "description": "Проверить минимальное количество товара",
+          "integerOnly": true,
+          "min": 1
+        }
+      ]
+    },
+    {
+      "name": "items",
+      "label": "Товары по скидке",
+      "type": "ref",
+      "commands": [
+        "add",
+        "remove",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "onDelete": "null",
+      "orderNumber": 60,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "item",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    }
+  ]
+}

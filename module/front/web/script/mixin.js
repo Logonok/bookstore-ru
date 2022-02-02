@@ -1,6 +1,7 @@
 'use strict';
 
 Vue.filter('boolean', Jam.FormatHelper.asBoolean.bind(Jam.FormatHelper));
+Vue.filter('date', Jam.FormatHelper.asDate.bind(Jam.FormatHelper));
 Vue.filter('datetime', Jam.FormatHelper.asDatetime.bind(Jam.FormatHelper));
 
 Vue.mixin({

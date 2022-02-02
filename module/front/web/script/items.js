@@ -61,7 +61,8 @@ Vue.component('items', {
                 picture: this.getThumbnailUrl('picture', item.picture, 'sm'),
                 stock: item.stock,
                 price: item.price,
-                bundled: item.bundled
+                bundled: item.bundled,
+                discount: item.discount
             }));
         }
     },

@@ -29,6 +29,11 @@
     {
       "name": "bundled",
       "orderNumber": 60
+    },
+    {
+      "name": "discount",
+      "eagerLoading": true,
+      "orderNumber": 110
     }
   ]
 }

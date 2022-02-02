@@ -6,7 +6,8 @@ Vue.component('my-cart', {
     },
     data () {
         return {
-            items: []
+            items: [],
+            orderDiscount: null
         };
     },
     computed: {
@@ -16,9 +17,17 @@ Vue.component('my-cart', {
         totalPrice () {
             let total = 0;
             for (let item of this.items) {
-                total += item.cartItem.getTotalPrice();
+                total += this.countItemDiscountPrice(item);
             }
             return total;
+        },
+        orderDiscountPercent () {
+            return this.orderDiscount && this.totalPrice >= this.orderDiscount.price
+                ? this.orderDiscount.percent
+                : 0;
+        },
+        finalPrice () {
+            return this.totalPrice - Cart.countPercent(this.orderDiscountPercent, this.totalPrice);
         }
     },
     watch: {
@@ -64,14 +73,23 @@ Vue.component('my-cart', {
         changeQuantity (item, delta) {
             if (item.cartItem.changeQuantity(delta)) {
                 item.quantity = item.cartItem.quantity;
-                item.price = item.cartItem.getTotalPrice();
+                item.price = item.cartItem.countPrice();
                 item.cartItem.cart.save();
+                this.updateItemDiscounts();
             }
         },
         async reload () {
             await this.load();
         },
         async load () {
+            if (this.empty) {
+                this.items = [];
+            } else {
+                await this.loadItems();
+                await this.loadOrderDiscount();
+            }
+        },
+        async loadItems () {
             if (this.empty) {
                 this.items = [];
                 return;
@@ -83,6 +101,7 @@ Vue.component('my-cart', {
             });
             this.cart.sync(items);
             this.items = this.prepareItems(items);
+            this.updateItemDiscounts();
         },
         getFilter () {
             return this.cart.items.map(item => ({
@@ -100,10 +119,42 @@ Vue.component('my-cart', {
                 id: item._id,
                 name: item.name,
                 photo: this.getThumbnailUrl('photo', item.mainPhoto?._id, 'xs'),
-                price: item.price,
+                price: item.cartItem.countPrice(),
                 quantity: item.cartItem.quantity,
-                cartItem: item.cartItem
+                cartItem: item.cartItem,
+                discount: item.discount,
+                activeDiscount: null
             };
+        },
+        updateItemDiscounts () {
+            for (const item of this.items) {
+                item.activeDiscount = this.getActiveItemDiscount(item);
+            }
+        },
+        getActiveItemDiscount (item) {
+            if (item.cartItem.quantity >= item.discount?.minQuantity) {
+                return item.discount.percent;
+            }
+        },
+        countItemDiscountPrice (item) {
+            const value = item.cartItem.countPrice();
+            return item.activeDiscount
+                ? value - Cart.countPercent(item.activeDiscount, value)
+                : value;
+        },
+        async loadOrderDiscount () {
+            const {items} = await this.fetchJson('list', {
+                class: 'orderDiscount',
+                view: 'current'
+            });
+            const data = items[0];
+            if (data) {
+                this.orderDiscount = {
+                    percent: data.percent,
+                    end: data.endDate,
+                    price: data.minPrice
+                };
+            }
         }
     },
     template: '#my-cart'

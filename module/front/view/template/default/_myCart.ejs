@@ -27,6 +27,9 @@
                         <div class="cart-item-price">
                             <span>Цена</span>:
                             <b class="price">{{item.price}}</b>
+                            <span v-if="item.activeDiscount" class="badge bg-danger">
+                                Скидка {{item.activeDiscount}}%
+                            </span>
                         </div>
                         <div class="cart-item-command">
                             <span @click="onIncrease(item)" class="fa fa-plus" title="Увеличить количество"></span>
@@ -35,10 +38,23 @@
                         </div>
                     </div>
                 </div>
+                <div v-if="orderDiscount" class="alert-warning alert mt-4 mb-0">
+                    На сумму заказа
+                    от <b>{{orderDiscount.price}}</b>
+                    действует скидка <b>{{orderDiscount.percent}}%</b>
+                    до <b>{{orderDiscount.end | date}}</b>.
+                </div>
                 <div class="cart-total">
-                    <div>
-                        <span>Общая цена</span>:
-                        <span class="num">{{totalPrice}}</span>
+                    <div v-if="orderDiscountPercent">
+                        Общая сумма
+                        <b>{{totalPrice}}</b>
+                        плюс скидка <b>{{orderDiscountPercent}}</b>%.
+                        Итого
+                        <span class="num">{{finalPrice}}</span>
+                    </div>
+                    <div v-else>
+                        Итоговая сумма:
+                        <span class="num">{{finalPrice}}</span>
                     </div>
                     <button @click="onOrder" class="btn-primary btn">Заказать</button>
                 </div>

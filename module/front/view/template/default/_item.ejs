@@ -62,7 +62,15 @@
                                     <div class="form-control-plaintext">{{stock}}</div>
                                 </div>
                             </div>
-
+                            <div v-if="discount" class="form-group row">
+                                <div class="col-9 offset-3">
+                                    <div class="alert-warning alert">
+                                        Скидка <b>{{discount.percent}}%</b> действует
+                                        до <b>{{discount.end | date}}</b>
+                                        на покупку от <b>{{discount.quantity}}</b> товара(ов)
+                                    </div>
+                                </div>
+                            </div>
                             <div v-if="inCart" class="buyed-block form-group">
                                 <div class="form-group row">
                                     <div class="col-9 offset-3">

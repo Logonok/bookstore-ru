@@ -32,6 +32,11 @@
       "orderNumber": 70
     },
     {
+      "name": "discount",
+      "eagerLoading": true,
+      "orderNumber": 110
+    },
+    {
       "name": "propColor",
       "orderNumber": 120
     },

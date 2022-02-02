@@ -1,0 +1,114 @@
+[
+  {
+    "_id": {
+      "$oid": "61f73ec46dd04d8d8c825648"
+    },
+    "_class": "itemDiscount",
+    "_creator": {
+      "$oid": "61f73e31fcdc9ffac6a321d7"
+    },
+    "minQuantity": 1,
+    "name": "Скидка на новые поступления",
+    "startDate": {
+      "$date": "2021-12-31T14:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2035-07-19T14:00:00.000Z"
+    },
+    "percent": 20,
+    "items": [
+      {
+        "$oid": "61ca9b3892b2b5f6019a2d0c"
+      },
+      {
+        "$oid": "61df8f22257df870842c9d42"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-31T01:43:32.485Z"
+    },
+    "_editor": {
+      "$oid": "61f73e31fcdc9ffac6a321d7"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-31T01:44:26.871Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f73f4a6dd04d8d8c825649"
+    },
+    "_class": "itemDiscount",
+    "_creator": {
+      "$oid": "61f73e31fcdc9ffac6a321d7"
+    },
+    "minQuantity": 2,
+    "name": "Скидка на несколько наборов",
+    "startDate": {
+      "$date": "2021-12-31T14:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2040-10-09T14:00:00.000Z"
+    },
+    "percent": 10,
+    "items": [
+      {
+        "$oid": "61ca9c8692b2b5f6019a2d11"
+      },
+      {
+        "$oid": "61e0c42178745493de63de6e"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-31T01:45:46.541Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f73fc26dd04d8d8c82564a"
+    },
+    "_class": "orderDiscount",
+    "_creator": {
+      "$oid": "61f73e31fcdc9ffac6a321d7"
+    },
+    "minPrice": 1000,
+    "name": "Скидка на заказ за 1000",
+    "startDate": {
+      "$date": "2022-01-19T14:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2035-01-19T14:00:00.000Z"
+    },
+    "percent": 15,
+    "_createdAt": {
+      "$date": "2022-01-31T01:47:46.097Z"
+    },
+    "_editor": {
+      "$oid": "61f73e31fcdc9ffac6a321d7"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-31T01:47:51.386Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f740886a1da64629e2680b"
+    },
+    "_class": "orderDiscount",
+    "_creator": {
+      "$oid": "61f7401187dfe426b9b49777"
+    },
+    "minPrice": 2000,
+    "name": "Истекшая скидка на заказ",
+    "startDate": {
+      "$date": "2019-12-31T14:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2020-12-31T14:00:00.000Z"
+    },
+    "percent": 25,
+    "_createdAt": {
+      "$date": "2022-01-31T01:51:04.379Z"
+    }
+  }
+]

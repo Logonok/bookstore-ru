@@ -59,7 +59,9 @@ module.exports = class CartOrderBehavior extends Base {
     }
 
     countByQuantityMap (id, quantity) {
-        quantity += this._quantityMap.hasOwnProperty(id) ? this._quantityMap[id] : 0;
+        if (this._quantityMap.hasOwnProperty(id)) {
+            quantity += this._quantityMap[id];
+        }
         this._quantityMap[id] = quantity;
         return quantity;
     }
@@ -73,18 +75,21 @@ module.exports = class CartOrderBehavior extends Base {
     }
 
     async afterInsert () {
-        await this.createOrderItems();
+        const items = await this.createOrderItems();
+        await this.setTotalPrice(items);
     }
 
     async createOrderItems () {
+        const items = [];
         if (Array.isArray(this._targets)) {
             for (const target of this._targets) {
-                await this.createOrderItem(target);
+                items.push(await this.createOrderItem(target));
             }
         }
+        return items;
     }
 
-    createOrderItem (data) {
+    async createOrderItem (data) {
         const itemClass = this.getMetadataClass('orderItem');
         const model = this.owner.createByView(itemClass);
         model.assign({
@@ -92,6 +97,23 @@ module.exports = class CartOrderBehavior extends Base {
             quantity: data.quantity,
             order: this.owner.getId()
         });
-        return model.insert();
+        await model.insert();
+        return model;
+    }
+
+    async setTotalPrice (items) {
+        let total = 0;
+        for (let item of items) {
+            total += item.get('price');
+        }
+        let discountClass = this.getMetadataClass('orderDiscount');
+        let discount = await discountClass.getView('current').find().one();
+        if (discount && total >= discount.get('minPrice')) {
+            total -= MathHelper.round(total * discount.get('percent') / 100, 2);
+        }
+        this.owner.set('totalPrice', total);
+        return this.owner.directUpdate();
     }
 };
+
+const MathHelper = require('areto/helper/MathHelper');

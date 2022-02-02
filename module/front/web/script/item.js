@@ -17,6 +17,7 @@ Vue.component('item', {
             onSale: null,
             bundled: null,
             quantity: 1,
+            discount: null,
             items: [],
             propAttrs: [],
             loaded: false
@@ -65,8 +66,18 @@ Vue.component('item', {
             this.onSale = data.onSale;
             this.bundled = data.bundled;
             this.items = data.bundled ? await this.loadItems() : [];
+            this.setDiscount(data.discount);
             await this.setPropAttrs(data);
             this.loaded = true;
+        },
+        setDiscount (data) {
+            if (data) {
+                this.discount = {
+                    percent: data.percent,
+                    end: data.endDate,
+                    quantity: data.minQuantity
+                };
+            }
         },
         async setPropAttrs (data) {
             const {attrs} = await this.fetchMeta('class', {

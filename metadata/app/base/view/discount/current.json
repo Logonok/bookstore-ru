@@ -1,0 +1,35 @@
+{
+  "label": "Действующая скидка",
+  "filter": [
+    "and",
+    [
+      "<",
+      "startDate",
+      "$now"
+    ],
+    [
+      ">",
+      "endDate",
+      "$now"
+    ]
+  ],
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "startDate",
+      "orderNumber": 20
+    },
+    {
+      "name": "endDate",
+      "orderNumber": 30
+    },
+    {
+      "name": "percent",
+      "orderNumber": 40
+    }
+  ]
+}

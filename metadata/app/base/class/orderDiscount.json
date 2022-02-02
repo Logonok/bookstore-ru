@@ -1,0 +1,40 @@
+{
+  "abstract": false,
+  "description": "Скидка на заказ",
+  "label": "Скидка на заказ",
+  "parent": "discount",
+  "attrs": [
+    {
+      "name": "minPrice",
+      "label": "Минимальная цена заказа",
+      "type": "float",
+      "description": "Минимальная цена заказа для применения скидки",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": 0.01,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "number",
+          "orderNumber": 10,
+          "integerOnly": false,
+          "min": 0.01
+        }
+      ]
+    }
+  ]
+}
