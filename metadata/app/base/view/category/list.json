@@ -1,0 +1,20 @@
+{
+  "label": "Представление списка",
+  "description": "Представление категорий по умолчанию",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "parent",
+      "eagerLoading": true,
+      "orderNumber": 20
+    },
+    {
+      "name": "orderNumber",
+      "orderNumber": 30
+    }
+  ]
+}

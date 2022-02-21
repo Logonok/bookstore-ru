@@ -7,6 +7,7 @@ script('front/script/Cart.js');
 script('front/script/CartItem.js');
 
 script('front/script/breadcrumbs.js');
+script('front/script/categories.js');
 script('front/script/item.js');
 script('front/script/items.js');
 script('front/script/myCart.js');
@@ -21,6 +22,7 @@ const user = _controller.user;
 %>
 
 <%- include('./_breadcrumbs') %>
+<%- include('./_categories') %>
 <%- include('./_item') %>
 <%- include('./_items') %>
 <%- include('./_myCart') %>
@@ -38,5 +40,7 @@ const user = _controller.user;
      data-thumbnail-url="<%- _url('/api/base/file/thumbnail') %>"
      data-csrf="<%- _controller.getCsrfToken() %>">
 
-    <componen :is="activePage" v-bind="activePageProps"></componen>
+    <keep-alive include="items">
+        <componen :is="activePage" v-bind="activePageProps"></componen>
+    </keep-alive>
 </div>

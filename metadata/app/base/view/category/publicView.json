@@ -1,0 +1,21 @@
+{
+  "label": "Публичное представление",
+  "description": "Публичное представление",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "parent",
+      "orderNumber": 30
+    },
+    {
+      "name": "children",
+      "eagerLoading": true,
+      "eagerView": "publicList",
+      "orderNumber": 40
+    }
+  ]
+}

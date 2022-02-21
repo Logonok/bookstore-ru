@@ -310,3 +310,14 @@ body {
     color: #ffa;
     text-shadow: 2px 2px 5px black, -2px -2px 5px black;
 }
+
+/* CATEGORY */
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.category-list .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

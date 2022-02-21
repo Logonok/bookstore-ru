@@ -1,0 +1,19 @@
+{
+  "label": "Создание",
+  "description": "Представление создания категории",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "orderNumber",
+      "orderNumber": 20
+    },
+    {
+      "name": "parent",
+      "orderNumber": 30
+    }
+  ]
+}

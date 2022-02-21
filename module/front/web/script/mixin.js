@@ -85,10 +85,10 @@ Vue.mixin({
             return true;
         },
         toMain () {
-            this.$root.$emit('items');
+            this.$root.$emit('items', ...arguments);
         },
         toOrders () {
-            this.$root.$emit('orders');
+            this.$root.$emit('orders', ...arguments);
         },
         toItem () {
             this.$root.$emit('item', ...arguments);

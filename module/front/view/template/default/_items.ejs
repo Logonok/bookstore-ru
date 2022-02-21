@@ -5,6 +5,8 @@
 
         <h1>Товары</h1>
 
+        <categories @change="onCategory" :category="category"></categories>
+
         <div class="loadable-container">
 
             <search @search="onSearch"></search>

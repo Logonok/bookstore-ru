@@ -1,0 +1,15 @@
+{
+  "label": "Древовидное представление",
+  "description": "Древовидное представление",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "orderNumber",
+      "orderNumber": 30
+    }
+  ]
+}

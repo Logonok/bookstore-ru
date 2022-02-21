@@ -101,7 +101,7 @@
       "history": false,
       "multiple": false,
       "orderNumber": 40,
-      "sortable": false,
+      "sortable": true,
       "sortableRelation": false,
       "readOnly": false,
       "required": true,

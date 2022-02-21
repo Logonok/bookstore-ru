@@ -1,9 +1,10 @@
-# Веб-приложение «Книжный магазин» 
+# Веб-приложение «Книжный магазин»
 
-- Статья [Как создать товар состоящий из других товаров](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kak-sozdat-tovar-sostoiascii-iz-drugih-tovarov-61dccf2e577bb77d26c81e85)
-- Статья [Как создать товар с произвольным набором свойств](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kak-sozdat-tovar-s-dopolnitelnymi-svoistvami-61df824037100e0fd8009c42)
+- Статья [Создание составного товара](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kak-sozdat-tovar-sostoiascii-iz-drugih-tovarov-61dccf2e577bb77d26c81e85)
+- Статья [Товары с произвольным набором свойств](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kak-sozdat-tovar-s-dopolnitelnymi-svoistvami-61df824037100e0fd8009c42)
+- Статья [Универсальная система скидок](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/universalnye-skidki-dlia-tovarov-i-zakazov-61ee412b0fdc8f33eae2695c)
 
-Веб-приложение сделано с помощью 
+Веб-приложение сделано с помощью
 [декларативного фреймворка Evado](https://github.com/mkhorin/evado).
 
 ![Evado Bookstore App](doc/evado-bookstore-01.png)

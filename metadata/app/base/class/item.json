@@ -367,6 +367,37 @@
       "signed": false,
       "trim": true,
       "unique": false
+    },
+    {
+      "name": "categories",
+      "label": "Категории",
+      "type": "ref",
+      "description": "Категории, в которые входит товар",
+      "commands": [
+        "add",
+        "remove",
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "onDelete": "null",
+      "orderNumber": 130,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "category",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
     }
   ],
   "groups": [

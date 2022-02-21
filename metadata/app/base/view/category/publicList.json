@@ -1,0 +1,15 @@
+{
+  "label": "Публичное представление списка",
+  "description": "Публичное представление списка",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "parent",
+      "orderNumber": 30
+    }
+  ]
+}

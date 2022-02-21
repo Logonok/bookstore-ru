@@ -21,6 +21,7 @@ const front = new Vue({
             activeBundle: null,
             activeItem: null,
             activeOrder: null,
+            activeCategory: null,
             cart: this.cart
         };
     },
@@ -38,6 +39,10 @@ const front = new Vue({
         },
         pagePros () {
             switch (this.activePage) {
+                case 'items':
+                    return {
+                        category: this.activeCategory
+                    };
                 case 'item':
                     return {
                         key: this.activeItem,
@@ -68,8 +73,9 @@ const front = new Vue({
             this.activeItem = id;
             this.activeBundle = bundle;
         },
-        onItems () {
+        onItems (category) {
             this.activePage = 'items';
+            this.activeCategory = typeof category === 'string' ? category : null;
         },
         onOrder (id) {
             if (this.requireAuth()) {

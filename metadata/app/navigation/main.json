@@ -39,7 +39,8 @@
       "name": "separator2",
       "label": "Разделитель",
       "orderNumber": 60,
-      "type": "divider"
+      "type": "divider",
+      "description": "Разделитель пунктов меню"
     },
     {
       "name": "currentDiscounts",
@@ -53,6 +54,21 @@
       "label": "Все скидки",
       "orderNumber": 80,
       "class": "discount"
+    },
+    {
+      "name": "separator3",
+      "label": "Разделитель",
+      "description": "Разделитель пунктов меню",
+      "orderNumber": 90,
+      "type": "divider"
+    },
+    {
+      "name": "categories",
+      "label": "Категории товаров",
+      "description": "Категории товаров",
+      "orderNumber": 100,
+      "class": "category",
+      "view": "routeTreeList"
     }
   ]
 }

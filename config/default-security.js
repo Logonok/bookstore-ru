@@ -13,13 +13,13 @@ module.exports = {
             type: 'all'
         }
     }, {
-        description: 'Гости и пользователи могуть читать скидки и изображения',
+        description: 'Гости и пользователи могуть читать скидки, изображения и категорий',
         roles: ['guest', 'user'],
         type: 'allow',
         actions: 'read',
         targets: {
             type: 'class',
-            class: ['discount', 'picture']
+            class: ['discount', 'picture', 'category']
         }
     }, {
         description: 'Гости и пользователи могуть читать публичные представления товаров',
@@ -135,6 +135,6 @@ module.exports = {
     },
 
     // правила для автоматической привязки пользователей к ролям
-    assignmentRules: {        
+    assignmentRules: {
     }
 };

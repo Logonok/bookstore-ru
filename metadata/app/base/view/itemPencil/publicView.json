@@ -43,6 +43,11 @@
     {
       "name": "propLead",
       "orderNumber": 130
+    },
+    {
+      "name": "categories",
+      "eagerLoading": true,
+      "orderNumber": 130
     }
   ]
 }

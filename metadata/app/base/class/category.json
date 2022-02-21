@@ -1,0 +1,194 @@
+{
+  "abstract": false,
+  "description": "Категория товаров",
+  "header": ".name",
+  "label": "Категория",
+  "order": {
+    "orderNumber": 1
+  },
+  "attrs": [
+    {
+      "name": "name",
+      "label": "Название",
+      "type": "string",
+      "description": "Название категории",
+      "commonSearchable": true,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": true,
+      "signed": false,
+      "trim": true,
+      "unique": true
+    },
+    {
+      "name": "orderNumber",
+      "label": "Порядковый номер",
+      "type": "integer",
+      "description": "Порядковый номер для упорядочивания в списке",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 20,
+      "sortable": true,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "behaviors": [
+        {
+          "type": "sortOrder",
+          "orderNumber": 10,
+          "description": "Автоматически определяет значения для порядкового номера",
+          "start": 10,
+          "step": 10
+        }
+      ]
+    },
+    {
+      "name": "parent",
+      "label": "Родитель",
+      "type": "ref",
+      "description": "Родительская категория",
+      "commands": [
+        "add",
+        "remove",
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "category",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "children",
+      "label": "Дочерние категории",
+      "type": "backref",
+      "commands": [
+        "add",
+        "remove",
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "children",
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "parent",
+      "refClass": "category",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "options": {
+        "css": "no-label"
+      }
+    },
+    {
+      "name": "items",
+      "label": "Товары",
+      "type": "backref",
+      "commands": [
+        "add",
+        "remove",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "items",
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "categories",
+      "refClass": "item",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "options": {
+        "css": "no-label"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "name": "tabs",
+      "label": "Вкладки",
+      "loadable": false,
+      "orderNumber": 1000,
+      "readOnly": false,
+      "required": false,
+      "type": "tabs"
+    },
+    {
+      "active": true,
+      "name": "children",
+      "label": "Дочерние категории",
+      "loadable": false,
+      "orderNumber": 1010,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    },
+    {
+      "name": "items",
+      "label": "Товары",
+      "loadable": true,
+      "orderNumber": 1020,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    }
+  ]
+}

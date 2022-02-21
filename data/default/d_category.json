@@ -1,0 +1,157 @@
+[
+  {
+    "_id": {
+      "$oid": "620cad11ad416a457e7461f5"
+    },
+    "_class": "category",
+    "_creator": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "orderNumber": 10,
+    "name": "Книги",
+    "parent": null,
+    "_createdAt": {
+      "$date": "2022-02-16T07:51:45.131Z"
+    },
+    "_editor": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-16T07:54:28.594Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "620cad18ad416a457e7461f6"
+    },
+    "_class": "category",
+    "_creator": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "orderNumber": 20,
+    "name": "Канцелярия",
+    "parent": null,
+    "_createdAt": {
+      "$date": "2022-02-16T07:51:52.833Z"
+    },
+    "_editor": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-16T08:05:04.222Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "620cad2cad416a457e7461f7"
+    },
+    "_class": "category",
+    "_creator": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "orderNumber": 30,
+    "name": "Наборы",
+    "parent": null,
+    "_createdAt": {
+      "$date": "2022-02-16T07:52:11.999Z"
+    },
+    "_editor": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-16T07:57:26.896Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "620cad70ad416a457e7461f8"
+    },
+    "_class": "category",
+    "_creator": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "orderNumber": 40,
+    "parent": {
+      "$oid": "620cad11ad416a457e7461f5"
+    },
+    "name": "Синие книги",
+    "_createdAt": {
+      "$date": "2022-02-16T07:53:20.881Z"
+    },
+    "_editor": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-16T08:00:48.798Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "620cad92ad416a457e7461f9"
+    },
+    "_class": "category",
+    "_creator": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "orderNumber": 50,
+    "parent": {
+      "$oid": "620cad11ad416a457e7461f5"
+    },
+    "name": "Красные книги",
+    "_createdAt": {
+      "$date": "2022-02-16T07:53:54.824Z"
+    },
+    "_editor": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-16T08:03:51.365Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "620cadb2ad416a457e7461fa"
+    },
+    "_class": "category",
+    "_creator": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "orderNumber": 60,
+    "parent": {
+      "$oid": "620cad11ad416a457e7461f5"
+    },
+    "name": "Зелёные книги",
+    "_createdAt": {
+      "$date": "2022-02-16T07:54:26.860Z"
+    },
+    "_editor": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-16T08:04:00.716Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "620cadddad416a457e7461fb"
+    },
+    "_class": "category",
+    "_creator": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "orderNumber": 70,
+    "parent": {
+      "$oid": "620cad18ad416a457e7461f6"
+    },
+    "name": "Карандаши",
+    "_createdAt": {
+      "$date": "2022-02-16T07:55:09.964Z"
+    },
+    "_editor": {
+      "$oid": "620cacdf108c7eb14187fcc9"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-16T08:04:54.671Z"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "label": "Представление корневых категорий",
+  "description": "Фильтруем категории без родителей для отображения древовидного списка",
+  "filter": {
+    "parent": null
+  },
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "orderNumber",
+      "orderNumber": 30
+    }
+  ],
+  "treeView": [
+    {
+      "refAttr": "children",
+      "view": "treeList"
+    }
+  ]
+}

@@ -22,7 +22,7 @@
                     <div class="col-md-6">
                         <div class="form">
 
-                            <h4 class="subtitle">{{description}}</h4>
+                            <h4 class="subtitle mt-0">{{description}}</h4>
 
                             <div class="form-group row">
                                 <label class="col-3 col-form-label">Идентификатор</label>
@@ -99,6 +99,27 @@
                         </div>
                     </div>
                     <div class="col-md-6">
+
+                        <div class="mb-3">
+                            <template v-if="categories.length">
+                                <div class="mb-3">
+                                    <b>Товар входит в категории</b>
+                                </div>
+                                <template v-for="item of categories">
+                                    <button @click="toMain(item.id)"
+                                            class="w-100 mb-2 btn-outline-secondary btn"
+                                            type="button">
+                                        {{item.name}}
+                                    </button>
+                                </template>
+                            </template>
+                            <template v-else>
+                                <i class="text-secondary">
+                                    Товар не входит ни в одну из категорий
+                                </i>
+                            </template>
+                        </div>
+
                         <img v-if="picture" :src="picture" class="img-thumbnail" alt="">
                     </div>
                 </div>

@@ -20,7 +20,8 @@ Vue.component('item', {
             discount: null,
             items: [],
             propAttrs: [],
-            loaded: false
+            loaded: false,
+            categories: []
         };
     },
     computed: {
@@ -65,10 +66,18 @@ Vue.component('item', {
             this.price = data.price;
             this.onSale = data.onSale;
             this.bundled = data.bundled;
+            this.categories = this.formatCategories(data.categories);
             this.items = data.bundled ? await this.loadItems() : [];
             this.setDiscount(data.discount);
             await this.setPropAttrs(data);
             this.loaded = true;
+        },
+        formatCategories (items) {
+            items = Array.isArray(items) ? items : [];
+            return items.map(item => ({
+                id: item._id,
+                name: Jam.t(item.name, 'meta')
+            }));
         },
         setDiscount (data) {
             if (data) {
