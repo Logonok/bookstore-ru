@@ -1,12 +1,12 @@
 {
   "abstract": false,
   "description": "Товар с дополнительными свойствами",
-  "label": "Товар Карандаш",
+  "label": "Товар Клей",
   "parent": "item",
   "attrs": [
     {
-      "name": "propLead",
-      "label": "Свойство Грифель",
+      "name": "propDensity",
+      "label": "Свойство Плотность",
       "type": "string",
       "viewType": "select",
       "commonSearchable": false,
@@ -18,52 +18,7 @@
       "hideEmpty": false,
       "history": false,
       "multiple": false,
-      "orderNumber": 120,
-      "sortable": false,
-      "sortableRelation": false,
-      "readOnly": false,
-      "required": false,
-      "selectSearchable": false,
-      "signed": false,
-      "trim": true,
-      "unique": false,
-      "enums": [
-        {
-          "items": [
-            {
-              "value": "soft",
-              "text": "Мягкий",
-              "orderNumber": 10
-            },
-            {
-              "value": "medium",
-              "text": "Средний",
-              "orderNumber": 20
-            },
-            {
-              "value": "hard",
-              "text": "Твёрдый",
-              "orderNumber": 30
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "propColor",
-      "label": "Свойство Цвет",
-      "type": "string",
-      "viewType": "radioList",
-      "commonSearchable": false,
-      "createOnRead": false,
-      "eagerLoading": false,
-      "escape": true,
-      "group": "props",
-      "hidden": false,
-      "hideEmpty": false,
-      "history": false,
-      "multiple": false,
-      "orderNumber": 130,
+      "orderNumber": 140,
       "sortable": false,
       "sortableRelation": false,
       "readOnly": false,
@@ -76,19 +31,59 @@
         {
           "items": [
             {
-              "value": "red",
-              "text": "Красный",
+              "value": "liquid",
+              "text": "Жидкий",
               "orderNumber": 10
             },
             {
-              "value": "blue",
-              "text": "Синий",
+              "value": "viscous",
+              "text": "Вязкий",
               "orderNumber": 20
             },
             {
-              "value": "green",
-              "text": "Зелёный",
+              "value": "solid",
+              "text": "Твёрдый",
               "orderNumber": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "propColor",
+      "label": "Свойство Цвет",
+      "type": "string",
+      "viewType": "select",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "props",
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 150,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "enums": [
+        {
+          "items": [
+            {
+              "value": "white",
+              "text": "Белый",
+              "orderNumber": 10
+            },
+            {
+              "value": "transparent",
+              "text": "Прозрачный",
+              "orderNumber": 20
             }
           ]
         }

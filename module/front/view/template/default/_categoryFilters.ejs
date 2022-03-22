@@ -1,0 +1,33 @@
+<template id="categoryFilters">
+    <div class="row">
+        <div class="col-12">
+            <hr>
+        </div>
+        <div class="col-lg-2 mb-3">
+            <b>Фильтры</b>
+        </div>
+        <div class="col-lg-10">
+            <div v-if="sets.length" class="category-filters">
+                <template v-for="set of sets">
+                    <div v-if="sets.length > 1" class="row">
+                        <div class="offset-xl-2 offset-lg-3 col-xl-10 col-lg-9">
+                            <div class="category-filter-set">{{set.label}}</div>
+                        </div>
+                    </div>
+                    <template v-for="item of set.items">
+                        <category-filter @change="onChange(item)" v-bind="item" ref="filter"></category-filter>
+                    </template>
+                </template>
+                <div class="row">
+                    <div class="offset-xl-2 offset-lg-3 col-xl-10 col-lg-9">
+                        <button @click="onApply" class="btn-success btn" type="button">Применить</button>
+                        <button @click="onClear" class="btn-outline-danger btn" type="button">Очистить</button>
+                    </div>
+                </div>
+            </div>
+            <template v-else>
+                <i>Нет фильтров в категории</i>
+            </template>
+        </div>
+    </div>
+</template>

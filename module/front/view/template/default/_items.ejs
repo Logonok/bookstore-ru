@@ -5,7 +5,10 @@
 
         <h1>Товары</h1>
 
-        <categories @change="onCategory" :category="category"></categories>
+        <categories @change="onCategory"
+            :category="category"
+            :class-provider="classProvider">
+        </categories>
 
         <div class="loadable-container">
 

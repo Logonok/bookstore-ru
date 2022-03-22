@@ -16,6 +16,7 @@ const front = new Vue({
     },
     data () {
         this.cart = new Cart;
+        this.classProvider = new ClassProvider(this);
         return {
             activePage: 'items',
             activeBundle: null,
@@ -41,13 +42,15 @@ const front = new Vue({
             switch (this.activePage) {
                 case 'items':
                     return {
-                        category: this.activeCategory
+                        category: this.activeCategory,
+                        classProvider: this.classProvider
                     };
                 case 'item':
                     return {
                         key: this.activeItem,
                         item: this.activeItem,
-                        bundle: this.activeBundle
+                        bundle: this.activeBundle,
+                        classProvider: this.classProvider
                     };
                 case 'order':
                     return {

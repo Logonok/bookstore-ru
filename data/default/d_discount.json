@@ -110,5 +110,31 @@
     "_createdAt": {
       "$date": "2022-01-31T01:51:04.379Z"
     }
+  },
+  {
+    "_id": {
+      "$oid": "62171a4c0c719a635fe917c2"
+    },
+    "_class": "itemDiscount",
+    "_creator": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "minQuantity": 1,
+    "name": "Скидка на клей",
+    "startDate": {
+      "$date": "2022-01-31T14:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2036-06-30T14:00:00.000Z"
+    },
+    "percent": 15,
+    "items": [
+      {
+        "$oid": "6217186e0c719a635fe917c0"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-02-24T05:40:28.048Z"
+    }
   }
 ]

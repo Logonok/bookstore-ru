@@ -4,7 +4,8 @@ Vue.component('item', {
     props: {
         bundle: String,
         item: String,
-        cart: Object
+        cart: Object,
+        classProvider: Object
     },
     data () {
         return {
@@ -89,11 +90,10 @@ Vue.component('item', {
             }
         },
         async setPropAttrs (data) {
-            const {attrs} = await this.fetchMeta('class', {
-                class: data._class
-            });
+            const cls = await this.classProvider.getClass(data._class);
+            const attrs = this.classProvider.getPropsAttrs(cls);
             for (const attr of attrs) {
-                if (attr.group === 'props' && data[attr.name]) {
+                if (data[attr.name]) {
                     this.propAttrs.push(this.getPropAttr(attr, data));
                 }
             }

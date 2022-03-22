@@ -35,11 +35,15 @@
       "$date": "2022-02-16T07:51:52.833Z"
     },
     "_editor": {
-      "$oid": "620cacdf108c7eb14187fcc9"
+      "$oid": "6216d0e5d3f56f42039892fd"
     },
     "_updatedAt": {
-      "$date": "2022-02-16T08:05:04.222Z"
-    }
+      "$date": "2022-02-24T06:13:08.765Z"
+    },
+    "filterClasses": [
+      "itemGlue",
+      "itemPencil"
+    ]
   },
   {
     "_id": {
@@ -56,11 +60,12 @@
       "$date": "2022-02-16T07:52:11.999Z"
     },
     "_editor": {
-      "$oid": "620cacdf108c7eb14187fcc9"
+      "$oid": "6216d0e5d3f56f42039892fd"
     },
     "_updatedAt": {
-      "$date": "2022-02-16T07:57:26.896Z"
-    }
+      "$date": "2022-02-24T06:01:44.629Z"
+    },
+    "filterClasses": []
   },
   {
     "_id": {
@@ -148,10 +153,39 @@
       "$date": "2022-02-16T07:55:09.964Z"
     },
     "_editor": {
-      "$oid": "620cacdf108c7eb14187fcc9"
+      "$oid": "6216d0e5d3f56f42039892fd"
     },
     "_updatedAt": {
-      "$date": "2022-02-16T08:04:54.671Z"
-    }
+      "$date": "2022-02-24T06:12:46.519Z"
+    },
+    "filterClasses": [
+      "itemPencil"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "62171c120c719a635fe917d2"
+    },
+    "_class": "category",
+    "_creator": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "orderNumber": 80,
+    "name": "Клей",
+    "parent": {
+      "$oid": "620cad18ad416a457e7461f6"
+    },
+    "_createdAt": {
+      "$date": "2022-02-24T05:48:02.691Z"
+    },
+    "_editor": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-24T06:12:52.738Z"
+    },
+    "filterClasses": [
+      "itemGlue"
+    ]
   }
 ]

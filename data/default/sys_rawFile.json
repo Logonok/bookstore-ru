@@ -160,5 +160,59 @@
     "owner": {
       "$oid": "61df8fc1257df870842c9d46"
     }
+  },
+  {
+    "_id": {
+      "$oid": "621717ea0c719a635fe917bd"
+    },
+    "file": "2022-02/621717ea0c719a635fe917bc",
+    "name": "glue-01.png",
+    "size": 6170,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-02-24T05:30:18.478Z"
+    },
+    "creator": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "owner": {
+      "$oid": "621717eb0c719a635fe917be"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62171a730c719a635fe917c4"
+    },
+    "file": "2022-02/62171a730c719a635fe917c3",
+    "name": "glue-02.png",
+    "size": 9364,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-02-24T05:41:07.778Z"
+    },
+    "creator": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "owner": {
+      "$oid": "621717e40c719a635fe917bb"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "62171a7e0c719a635fe917c6"
+    },
+    "file": "2022-02/62171a7e0c719a635fe917c5",
+    "name": "glue-03.png",
+    "size": 7913,
+    "type": "image/png",
+    "createdAt": {
+      "$date": "2022-02-24T05:41:18.210Z"
+    },
+    "creator": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "owner": {
+      "$oid": "621717dd0c719a635fe917b8"
+    }
   }
 ]

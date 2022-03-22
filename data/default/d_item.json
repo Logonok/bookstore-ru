@@ -372,5 +372,113 @@
         "$oid": "620cad18ad416a457e7461f6"
       }
     ]
+  },
+  {
+    "_id": {
+      "$oid": "621718440c719a635fe917bf"
+    },
+    "_class": "itemGlue",
+    "_creator": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "price": 15,
+    "stock": 10,
+    "onSale": true,
+    "name": "Твёрдый клей",
+    "description": "Товар с дополнительными свойствами",
+    "picture": {
+      "$oid": "621717eb0c719a635fe917be"
+    },
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "categories": [
+      {
+        "$oid": "62171c120c719a635fe917d2"
+      }
+    ],
+    "propDensity": "solid",
+    "_createdAt": {
+      "$date": "2022-02-24T05:31:48.578Z"
+    },
+    "_editor": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-25T08:15:46.560Z"
+    },
+    "propColor": "white"
+  },
+  {
+    "_id": {
+      "$oid": "6217186e0c719a635fe917c0"
+    },
+    "_class": "itemGlue",
+    "_creator": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "price": 25,
+    "stock": 15,
+    "onSale": true,
+    "name": "Жидкий клей",
+    "description": "Товар с дополнительными свойствами",
+    "picture": {
+      "$oid": "621717e40c719a635fe917bb"
+    },
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "categories": [
+      {
+        "$oid": "62171c120c719a635fe917d2"
+      }
+    ],
+    "propDensity": "liquid",
+    "_createdAt": {
+      "$date": "2022-02-24T05:32:30.798Z"
+    },
+    "_editor": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-25T08:15:41.679Z"
+    },
+    "propColor": "transparent"
+  },
+  {
+    "_id": {
+      "$oid": "621718980c719a635fe917c1"
+    },
+    "_class": "itemGlue",
+    "_creator": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "price": 40,
+    "stock": 20,
+    "onSale": true,
+    "name": "Вязкий клей",
+    "description": "Товар с дополнительными свойствами",
+    "picture": {
+      "$oid": "621717dd0c719a635fe917b8"
+    },
+    "bundled": false,
+    "totalStock": false,
+    "items": [],
+    "categories": [
+      {
+        "$oid": "62171c120c719a635fe917d2"
+      }
+    ],
+    "propDensity": "viscous",
+    "_createdAt": {
+      "$date": "2022-02-24T05:33:12.617Z"
+    },
+    "_editor": {
+      "$oid": "6216d0e5d3f56f42039892fd"
+    },
+    "_updatedAt": {
+      "$date": "2022-02-25T08:15:36.975Z"
+    },
+    "propColor": "white"
   }
 ]

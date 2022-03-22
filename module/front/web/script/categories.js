@@ -2,11 +2,13 @@
 
 Vue.component('categories', {
     props: {
-        category: String
+        category: String,
+        classProvider: Object
     },
     data () {
         return {
             items: [],
+            lastActive: null,
             roots: []
         };
     },
@@ -33,15 +35,18 @@ Vue.component('categories', {
         }
     },
     methods: {
+        onFilter (data) {
+            this.emitChange(data);
+        },
         onItem (item, items) {
             const active = !item.active;
             this.clearActiveItems(items);
             item.active = active;
             this.emitChange();
         },
-        emitChange () {
-            const last = this.getLastActiveItem(this.items);
-            this.$emit('change', this.getDescendantIds(last));
+        emitChange (data) {
+            this.lastActive = this.getLastActiveItem(this.items);
+            this.$emit('change', this.getDescendantIds(this.lastActive), data);
         },
         getItem (id) {
             for (const item of this.items) {
@@ -96,6 +101,7 @@ Vue.component('categories', {
                 name: data.name,
                 parent: data.parent,
                 children: [],
+                filterClasses: data.filterClasses,
                 active: false
             };
         },

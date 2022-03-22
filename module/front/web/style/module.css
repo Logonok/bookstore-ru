@@ -321,3 +321,8 @@ body {
     margin-right: 10px;
     margin-bottom: 10px;
 }
+.category-filter-set {
+    margin-bottom: .75rem;
+    font-weight: var(--semi-bold);
+    color: var(--dark-success);
+}

@@ -3,6 +3,7 @@
 - Статья [Создание составного товара](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kak-sozdat-tovar-sostoiascii-iz-drugih-tovarov-61dccf2e577bb77d26c81e85)
 - Статья [Товары с произвольным набором свойств](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kak-sozdat-tovar-s-dopolnitelnymi-svoistvami-61df824037100e0fd8009c42)
 - Статья [Универсальная система скидок](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/universalnye-skidki-dlia-tovarov-i-zakazov-61ee412b0fdc8f33eae2695c)
+- Статья [Категоризуйся на раз-два](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kategorizuisia-na-razdva-6205c1c0047813262a2ee9b8)
 
 Веб-приложение сделано с помощью
 [декларативного фреймворка Evado](https://github.com/mkhorin/evado).

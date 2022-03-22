@@ -7,12 +7,14 @@ Vue.component('items', {
             default: 8
         },
         cart: Object,
-        category: String
+        category: String,
+        classProvider: Object
     },
     data () {
         return {
             items: [],
-            categories: []
+            categories: [],
+            filterData: []
         };
     },
     computed: {
@@ -25,8 +27,9 @@ Vue.component('items', {
         await this.reload();
     },
     methods: {
-        onCategory (categories) {
+        onCategory (categories, filter) {
             this.categories = categories;
+            this.filterData = filter || [];
             this.reload();
         },
         onSearch (text) {
@@ -50,7 +53,8 @@ Vue.component('items', {
         getFilter () {
             return [
                 this.getCategoryFilter(),
-                this.getSearchFilter()
+                this.getSearchFilter(),
+                ...this.filterData
             ].filter(item => item);
         },
         getCategoryFilter () {

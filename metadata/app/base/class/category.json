@@ -112,6 +112,9 @@
       "hideEmpty": false,
       "history": false,
       "multiple": true,
+      "options": {
+        "css": "no-label"
+      },
       "orderNumber": 40,
       "sortable": false,
       "sortableRelation": false,
@@ -122,10 +125,7 @@
       "selectSearchable": false,
       "signed": false,
       "trim": true,
-      "unique": false,
-      "options": {
-        "css": "no-label"
-      }
+      "unique": false
     },
     {
       "name": "items",
@@ -145,6 +145,9 @@
       "hideEmpty": false,
       "history": false,
       "multiple": true,
+      "options": {
+        "css": "no-label"
+      },
       "orderNumber": 50,
       "sortable": false,
       "sortableRelation": false,
@@ -155,10 +158,32 @@
       "selectSearchable": false,
       "signed": false,
       "trim": true,
+      "unique": false
+    },
+    {
+      "name": "filterClasses",
+      "label": "Классы для фильтра",
+      "type": "json",
+      "viewType": "classes",
+      "description": "Классы товаров, дополнительные свойства которых будут использоваться для фильтра",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 60,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
       "unique": false,
-      "options": {
-        "css": "no-label"
-      }
+      "hint": "Классы товаров, дополнительные свойства которых будут использоваться для фильтра"
     }
   ],
   "groups": [
