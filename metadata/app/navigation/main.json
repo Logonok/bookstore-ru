@@ -9,6 +9,27 @@
       "class": "order"
     },
     {
+      "parent": "categories",
+      "name": "dynamicCategory",
+      "label": "Динамические категории",
+      "orderNumber": 10,
+      "class": "item",
+      "options": {
+        "provider": {
+          "class": "category",
+          "nameAttr": "name"
+        },
+        "filter": [
+          "id",
+          "categories",
+          [
+            "$param",
+            "id"
+          ]
+        ]
+      }
+    },
+    {
       "name": "separator",
       "label": "Разделитель",
       "description": "Разделитель пунктов меню",
@@ -38,9 +59,9 @@
     {
       "name": "separator2",
       "label": "Разделитель",
+      "description": "Разделитель пунктов меню",
       "orderNumber": 60,
-      "type": "divider",
-      "description": "Разделитель пунктов меню"
+      "type": "divider"
     },
     {
       "name": "currentDiscounts",
