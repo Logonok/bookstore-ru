@@ -5,6 +5,7 @@
 - Статья [Универсальная система скидок](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/universalnye-skidki-dlia-tovarov-i-zakazov-61ee412b0fdc8f33eae2695c)
 - Статья [Категоризуйся на раз-два](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/kategorizuisia-na-razdva-6205c1c0047813262a2ee9b8)
 - Статья [Поиск всему голова](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/poisk-vsemu-golova-6212e8dd2216c21a91524bba)
+- Статья [Динамическое меню из категорий](https://zen.yandex.ru/media/id/60645976a736eb1c45830da8/gotovim-dinamicheskoe-meniu-iz-kategorii-62380391b834125366988617)
 
 Веб-приложение сделано с помощью
 [декларативного фреймворка Evado](https://github.com/mkhorin/evado).
