@@ -1,92 +1,92 @@
 <template id="order">
-    <div class="order page">
+  <div class="order page">
 
-        <breadcrumbs :cart="cart">
-            <template #path>
-                <li class="breadcrumb-item">
-                    <a @click.prevent="toMain" href="#">Главная</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a @click.prevent="toOrders" href="#">Заказы</a>
-                </li>
-                <li class="breadcrumb-item">Заказ</li>
-            </template>
-        </breadcrumbs>
+    <breadcrumbs :cart="cart">
+      <template #path>
+        <li class="breadcrumb-item">
+          <a @click.prevent="toMain" href="#">Главная</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a @click.prevent="toOrders" href="#">Заказы</a>
+        </li>
+        <li class="breadcrumb-item">Заказ</li>
+      </template>
+    </breadcrumbs>
 
-        <div class="loadable-container">
-            <template v-show="!loading">
+    <div class="loadable-container">
+      <template v-show="!loading">
 
-                <h1>Заказ #{{id}}</h1>
+        <h1>Заказ #{{id}}</h1>
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form">
-                            <div class="form-group row">
-                                <label class="col-4 col-form-label">Дата создания</label>
-                                <div class="col-8">
-                                    <div class="form-control-plaintext">{{date | datetime}}</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-4 col-form-label">Состояние</label>
-                                <div class="col-8">
-                                    <div class="form-control-plaintext">{{stateTitle}}</div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-4 col-form-label">Общая стоимость</label>
-                                <div class="col-8">
-                                    <div class="form-control-plaintext"><b>{{price}}</b></div>
-                                </div>
-                            </div>
-                            <div v-if="draft" class="form-group row">
-                                <div class="offset-4 col-8">
-
-                                </div>
-                            </div>
-                            <div v-if="!approved" class="form-group row">
-                                <div class="offset-4 col-8">
-                                    <button v-if="draft" @click="onConfirm" class="btn-success btn" type="button">
-                                        Подтвердить
-                                    </button>
-                                    <button @click="onDelete" class="btn-danger btn" type="button">
-                                        Удалить
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="item-list">
-                            <div v-for="item of items" :key="item.id" class="row-item">
-                                <div v-if="item.picture" class="cell">
-                                    <div class="value">
-                                        <img :src="item.picture" class="img-thumbnail" alt="">
-                                    </div>
-                                </div>
-                                <div class="cell">
-                                    <label>Название</label>
-                                    <div class="value">
-                                        <a @click.prevent="toItem(item.itemId)" href="#">{{item.name}}</a>
-                                    </div>
-                                </div>
-                                <div class="cell">
-                                    <label>Количество</label>
-                                    <div class="value">{{item.quantity}}</div>
-                                </div>
-                                <div class="cell">
-                                    <label>Цена</label>
-                                    <div class="value">{{item.price}}</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form">
+              <div class="form-group row">
+                <label class="col-4 col-form-label">Дата создания</label>
+                <div class="col-8">
+                  <div class="form-control-plaintext">{{date | datetime}}</div>
                 </div>
-            </template>
+              </div>
+              <div class="form-group row">
+                <label class="col-4 col-form-label">Состояние</label>
+                <div class="col-8">
+                  <div class="form-control-plaintext">{{stateTitle}}</div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-4 col-form-label">Общая стоимость</label>
+                <div class="col-8">
+                  <div class="form-control-plaintext"><b>{{price}}</b></div>
+                </div>
+              </div>
+              <div v-if="draft" class="form-group row">
+                <div class="offset-4 col-8">
 
-            <div v-show="loading" class="loader">
-                <i class="fa fa-spinner fa-spin"></i>
+                </div>
+              </div>
+              <div v-if="!approved" class="form-group row">
+                <div class="offset-4 col-8">
+                  <button v-if="draft" @click="onConfirm" class="btn-success btn" type="button">
+                    Подтвердить
+                  </button>
+                  <button @click="onDelete" class="btn-danger btn" type="button">
+                    Удалить
+                  </button>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-md-8">
+            <div class="item-list">
+              <div v-for="item of items" :key="item.id" class="row-item">
+                <div v-if="item.picture" class="cell">
+                  <div class="value">
+                    <img :src="item.picture" class="img-thumbnail" alt="">
+                  </div>
+                </div>
+                <div class="cell">
+                  <label>Название</label>
+                  <div class="value">
+                    <a @click.prevent="toItem(item.itemId)" href="#">{{item.name}}</a>
+                  </div>
+                </div>
+                <div class="cell">
+                  <label>Количество</label>
+                  <div class="value">{{item.quantity}}</div>
+                </div>
+                <div class="cell">
+                  <label>Цена</label>
+                  <div class="value">{{item.price}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </template>
+
+      <div v-show="loading" class="loader">
+        <i class="fa fa-spinner fa-spin"></i>
+      </div>
     </div>
+  </div>
 </template>

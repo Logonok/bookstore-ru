@@ -1,36 +1,36 @@
 <template id="categories">
-    <div class="loadable-container">
-        <div v-if="!loading">
-            <div v-for="(items, index) of visibleLevels" class="row mb-3">
-                <div class="col-lg-2 mb-3">
-                    <b v-if="!index">Категории товаров</b>
-                    <b v-else class="text-secondary">Подкатегории</b>
-                </div>
-                <div class="col-lg-10">
-                    <div v-if="items.length" class="category-list">
-                        <template v-for="item of items">
-                            <button @click="onItem(item, items)"
-                                    :class="{active: item.active, 'btn-outline-primary': !index, 'btn-outline-secondary': index}"
-                                    class="btn" type="button">
-                                {{item.name}}
-                            </button>
-                        </template>
-                    </div>
-                    <template v-else-if="!index">
-                        <i>Нет категорий</i>
-                    </template>
-                </div>
-            </div>
-            <template v-if="lastActive">
-                <category-filters
-                    @apply="onFilter"
-                    :active-category="lastActive"
-                    :class-provider="classProvider">
-                </category-filters>
+  <div class="loadable-container">
+    <div v-if="!loading">
+      <div v-for="(items, index) of visibleLevels" class="row mb-3">
+        <div class="col-lg-2 mb-3">
+          <b v-if="!index">Категории товаров</b>
+          <b v-else class="text-secondary">Подкатегории</b>
+        </div>
+        <div class="col-lg-10">
+          <div v-if="items.length" class="category-list">
+            <template v-for="item of items">
+              <button @click="onItem(item, items)"
+                  :class="{active: item.active, 'btn-outline-primary': !index, 'btn-outline-secondary': index}"
+                  class="btn" type="button">
+                {{item.name}}
+              </button>
             </template>
+          </div>
+          <template v-else-if="!index">
+            <i>Нет категорий</i>
+          </template>
         </div>
-        <div v-show="loading" class="loader">
-            <i class="fa fa-spinner fa-spin"></i>
-        </div>
+      </div>
+      <template v-if="lastActive">
+        <category-filters
+          @apply="onFilter"
+          :active-category="lastActive"
+          :class-provider="classProvider">
+        </category-filters>
+      </template>
     </div>
+    <div v-show="loading" class="loader">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
 </template>

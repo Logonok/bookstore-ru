@@ -1,72 +1,72 @@
 <template id="my-cart">
-    <div class="page">
+  <div class="page">
 
-        <breadcrumbs :cart="cart">
-            <template #path>
-                <li class="breadcrumb-item">
-                    <a @click.prevent="toMain" href="#">Главная</a>
-                </li>
-                <li class="breadcrumb-item">Корзина</li>
-            </template>
-        </breadcrumbs>
+    <breadcrumbs :cart="cart">
+      <template #path>
+        <li class="breadcrumb-item">
+          <a @click.prevent="toMain" href="#">Главная</a>
+        </li>
+        <li class="breadcrumb-item">Корзина</li>
+      </template>
+    </breadcrumbs>
 
-        <h1>Корзина</h1>
+    <h1>Корзина</h1>
 
-        <div class="loadable-container">
+    <div class="loadable-container">
 
-            <template v-if="!loading && !empty">
-                <div class="cart-items">
-                    <div v-for="item of items" class="cart-item">
-                        <div class="cart-item-name">
-                            <a @click.prevent="toItem(item.id)" href="#">{{item.name}}</a>
-                        </div>
-                        <div class="cart-item-quantity">
-                            <span>Количество</span>:
-                            <b class="quantity">{{item.quantity}}</b>
-                        </div>
-                        <div class="cart-item-price">
-                            <span>Цена</span>:
-                            <b class="price">{{item.price}}</b>
-                            <span v-if="item.activeDiscount" class="badge bg-danger">
-                                Скидка {{item.activeDiscount}}%
-                            </span>
-                        </div>
-                        <div class="cart-item-command">
-                            <span @click="onIncrease(item)" class="fa fa-plus" title="Увеличить количество"></span>
-                            <span @click="onReduce(item)" class="fa fa-minus" title="Уменьшить количество"></span>
-                            <span @click="onRemove(item)" class="text-danger fa fa-trash" title="Удалить"></span>
-                        </div>
-                    </div>
-                </div>
-                <div v-if="orderDiscount" class="alert-warning alert mt-4 mb-0">
-                    На сумму заказа
-                    от <b>{{orderDiscount.price}}</b>
-                    действует скидка <b>{{orderDiscount.percent}}%</b>
-                    до <b>{{orderDiscount.end | date}}</b>.
-                </div>
-                <div class="cart-total">
-                    <div v-if="orderDiscountPercent">
-                        Общая сумма
-                        <b>{{totalPrice}}</b>
-                        плюс скидка <b>{{orderDiscountPercent}}</b>%.
-                        Итого
-                        <span class="num">{{finalPrice}}</span>
-                    </div>
-                    <div v-else>
-                        Итоговая сумма:
-                        <span class="num">{{finalPrice}}</span>
-                    </div>
-                    <button @click="onOrder" class="btn-primary btn">Заказать</button>
-                </div>
-            </template>
-
-            <div v-show="!loading && empty" class="alert-warning alert">
-                Ваша корзина пуста
+      <template v-if="!loading && !empty">
+        <div class="cart-items">
+          <div v-for="item of items" class="cart-item">
+            <div class="cart-item-name">
+              <a @click.prevent="toItem(item.id)" href="#">{{item.name}}</a>
             </div>
-
-            <div v-show="loading" class="loader">
-                <i class="fa fa-spinner fa-spin"></i>
+            <div class="cart-item-quantity">
+              <span>Количество</span>:
+              <b class="quantity">{{item.quantity}}</b>
             </div>
+            <div class="cart-item-price">
+              <span>Цена</span>:
+              <b class="price">{{item.price}}</b>
+              <span v-if="item.activeDiscount" class="badge bg-danger">
+                Скидка {{item.activeDiscount}}%
+              </span>
+            </div>
+            <div class="cart-item-command">
+              <span @click="onIncrease(item)" class="fa fa-plus" title="Увеличить количество"></span>
+              <span @click="onReduce(item)" class="fa fa-minus" title="Уменьшить количество"></span>
+              <span @click="onRemove(item)" class="text-danger fa fa-trash" title="Удалить"></span>
+            </div>
+          </div>
         </div>
+        <div v-if="orderDiscount" class="alert-warning alert mt-4 mb-0">
+          На сумму заказа
+          от <b>{{orderDiscount.price}}</b>
+          действует скидка <b>{{orderDiscount.percent}}%</b>
+          до <b>{{orderDiscount.end | date}}</b>.
+        </div>
+        <div class="cart-total">
+          <div v-if="orderDiscountPercent">
+            Общая сумма
+            <b>{{totalPrice}}</b>
+            плюс скидка <b>{{orderDiscountPercent}}</b>%.
+            Итого
+            <span class="num">{{finalPrice}}</span>
+          </div>
+          <div v-else>
+            Итоговая сумма:
+            <span class="num">{{finalPrice}}</span>
+          </div>
+          <button @click="onOrder" class="btn-primary btn">Заказать</button>
+        </div>
+      </template>
+
+      <div v-show="!loading && empty" class="alert-warning alert">
+        Ваша корзина пуста
+      </div>
+
+      <div v-show="loading" class="loader">
+        <i class="fa fa-spinner fa-spin"></i>
+      </div>
     </div>
+  </div>
 </template>
