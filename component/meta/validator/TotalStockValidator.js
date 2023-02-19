@@ -33,8 +33,10 @@ module.exports = class TotalStockValidator extends Base {
         if (item.get('stock') < quantity) {
             return this.getMessage(item.get('name'));
         }
-        if (item.get('bundled') && item.get('totalStock')) {
-            return this.validateNestedItems(item, quantity, map);
+        if (item.get('bundled')) {
+            if (item.get('totalStock')) {
+                return this.validateNestedItems(item, quantity, map);
+            }
         }
         return true;
     }
@@ -51,6 +53,7 @@ module.exports = class TotalStockValidator extends Base {
     }
 
     getMessage (name) {
-        return this.createClientMessage(this.message, 'The bundle stock is greater than the stock of its element {name}', {name});
+        const defaults = 'The bundle stock is greater than the stock of its element {name}';
+        return this.createClientMessage(this.message, defaults, {name});
     }
 };

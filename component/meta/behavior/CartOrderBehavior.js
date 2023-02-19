@@ -83,7 +83,8 @@ module.exports = class CartOrderBehavior extends Base {
         const items = [];
         if (Array.isArray(this._targets)) {
             for (const target of this._targets) {
-                items.push(await this.createOrderItem(target));
+                const item = await this.createOrderItem(target);
+                items.push(item);
             }
         }
         return items;
@@ -106,10 +107,14 @@ module.exports = class CartOrderBehavior extends Base {
         for (let item of items) {
             total += item.get('price');
         }
-        let discountClass = this.getMetadataClass('orderDiscount');
-        let discount = await discountClass.getView('current').find().one();
-        if (discount && total >= discount.get('minPrice')) {
-            total -= MathHelper.round(total * discount.get('percent') / 100, 2);
+        const discountClass = this.getMetadataClass('orderDiscount');
+        const discount = await discountClass.getView('current').find().one();
+        if (discount) {
+            const minPrice = discount.get('minPrice');
+            if (total >= minPrice) {
+                const percent = discount.get('percent');
+                total -= MathHelper.round(total * percent / 100, 2);
+            }
         }
         this.owner.set('totalPrice', total);
         return this.owner.directUpdate();

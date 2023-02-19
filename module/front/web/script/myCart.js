@@ -22,9 +22,12 @@ Vue.component('my-cart', {
             return total;
         },
         orderDiscountPercent () {
-            return this.orderDiscount && this.totalPrice >= this.orderDiscount.price
-                ? this.orderDiscount.percent
-                : 0;
+            if (this.orderDiscount) {
+                if (this.totalPrice >= this.orderDiscount.price) {
+                  return this.orderDiscount.percent;
+                }
+            }
+            return 0;
         },
         finalPrice () {
             return this.totalPrice - Cart.countPercent(this.orderDiscountPercent, this.totalPrice);

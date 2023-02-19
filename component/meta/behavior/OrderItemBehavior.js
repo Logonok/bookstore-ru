@@ -69,8 +69,12 @@ module.exports = class OrderItemBehavior extends Base {
         let quantity = this.getQuantity();
         let price = item.get('price');
         let discount = await item.related.resolve('discount');
-        if (discount && quantity >= discount.get('minQuantity')) {
-            price -= price * discount.get('percent') / 100;
+        if (discount) {
+            const minQuantity = discount.get('minQuantity');
+            if (quantity >= minQuantity) {
+                const percent = discount.get('percent');
+                price -= price * percent / 100;
+            }
         }
         price = MathHelper.round(price * quantity, 2);
         this.owner.set('price', price);
