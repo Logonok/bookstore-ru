@@ -1,18 +1,15 @@
 {
   "name": "bookstore",
-  "version": "6.3.0",
+  "version": "6.4.0",
   "description": "Bookstore Web App",
   "author": "Logonok",
   "license": "MIT",
-  "engines": {
-    "node": ">=16.13.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/logonok/bookstore.git"
   },
   "dependencies": {
-    "evado": "~5.6.0",
+    "evado": "~5.7.0",
     "evado-api-base": "~4.5.0",
     "evado-api-navigation": "~2.2.0",
     "evado-meta-base": "~4.6.0",
@@ -21,7 +18,7 @@
     "evado-module-admin": "~5.3.0",
     "evado-module-office": "~5.5.0",
     "evado-module-studio": "~5.5.0",
-    "sharp": "~0.31.0"
+    "sharp": "~0.32.0"
   },
   "scripts": {
     "start": "node console/start"
