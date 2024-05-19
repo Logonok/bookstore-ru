@@ -61,7 +61,6 @@ Vue.component('category-filters', {
             for (const cls of classes) {
                 const attrs = this.classProvider.getPropsAttrs(cls);
                 if (attrs.length) {
-                    const label = cls.label;
                     result.push({
                         label: cls.label,
                         items: attrs.map(this.resolvePropsItem, this)
